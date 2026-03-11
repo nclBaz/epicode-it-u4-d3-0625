@@ -20,11 +20,11 @@ public class Main {
 //		circle4.printInfo();
 
 		System.out.println("L'area del cerchio 1 é:" + circle1.getArea());
-		System.out.println("La coordinata X di cerchio 1 è: " + circle1.x);
-		circle1.x = 1000;
-		System.out.println("La coordinata X di cerchio 1 è: " + circle1.x);
+//		System.out.println("La coordinata X di cerchio 1 è: " + circle1.x);
+//		circle1.x = 1000;
+//		System.out.println("La coordinata X di cerchio 1 è: " + circle1.x);
 
-		System.out.println("Il numero di cerchi creati è : " + Circle.numCerchiCreati);
+//		System.out.println("Il numero di cerchi creati è : " + Circle.numCerchiCreati);
 
 //		multiply(2, 3); // Se il metodo è statico non serve creare alcun oggetto per utilizzarlo
 //

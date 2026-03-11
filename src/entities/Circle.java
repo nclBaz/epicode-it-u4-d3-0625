@@ -1,12 +1,12 @@
 package entities;
 
 public class Circle {
-	public static int numCerchiCreati = 0;
+	private static int numCerchiCreati = 0;
 	// LISTA ATTRIBUTI
-	public double radius;
-	public double x;
-	public double y;
-	public Colore colore; // o BLU o ROSSO o VERDE (no altri valori permessi)
+	private double radius;
+	private double y;
+	private Colore colore; // o BLU o ROSSO o VERDE (no altri valori permessi)
+	private double x;
 
 	// LISTA COSTRUTTORI
 	public Circle(double x, double y, double radius, Colore colore) { // I COSTRUTTORE <-- Circle c1 = new Circle(1.0, 0.5, 10.3);
@@ -23,7 +23,6 @@ public class Circle {
 		this.y = 0.0;
 		this.colore = Colore.VERDE;
 		numCerchiCreati++;
-
 	}
 
 	public Circle() { // III COSTRUTTORE <-- Circle c3 = new Circle();
@@ -32,6 +31,34 @@ public class Circle {
 		this.y = 0.0;
 		this.colore = Colore.VERDE;
 		numCerchiCreati++;
+	}
+
+	// LISTA METODI STATICI
+
+
+	public static void printNumCreati() {
+		System.out.println("Il numero di cerchi creati è: " + numCerchiCreati);
+	}
+
+	// LISTA METODI NON STATICI
+
+	// GETTER & SETTER
+
+	public static int getNumCerchiCreati() {
+		return numCerchiCreati;
+	}
+
+	// Non faccio il setter per numCerchiCreati altrimenti
+	// qualcuno potrebbe sovrascrivere il contatore
+
+
+	public double getRadius() {
+		return this.radius;
+	}
+
+	public void setRadius(double radius) {
+		if (radius > 0) this.radius = radius;
+		else System.out.println("ERRORE! IL RAGGIO NON PUO' ESSERE MINORE O UGUALE A ZERO");
 	}
 
 	public void printInfo() {
